@@ -27,6 +27,9 @@ export FZF_DEFAULT_OPTS="
 --border
 --inline-info
 "
+# --- fzf: use fd instead of find ---
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # --- Conda ---
 # >>> conda initialize >>>
