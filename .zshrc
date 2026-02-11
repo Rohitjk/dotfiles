@@ -31,6 +31,14 @@ export FZF_DEFAULT_OPTS="
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# ---fzf for ssh ---
+ssh-hosts() {
+  host=$(grep '^Host ' ~/.ssh/config | awk '{print $2}' | grep -v '\*' | fzf)
+  if [ -n "$host" ]; then
+    ssh "$host"
+  fi
+}
+
 # --- Conda ---
 # >>> conda initialize >>>
 __conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
