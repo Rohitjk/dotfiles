@@ -141,6 +141,25 @@ Yazi is the terminal file manager, integrated with the shell.
 | `h / l` | Parent / enter directory             |
 
 ---
+# SSH Hosts Selector
+
+A tiny helper that lets you fuzzy-search and SSH into hosts defined in `~/.ssh/config` using `fzf`.
+
+## Usage
+
+Run:
+
+```bash
+ssh-hosts
+```
+You’ll get an interactive fuzzy list of all SSH hosts from ~/.ssh/config.
+
+Type to filter
+
+Press Enter to connect
+
+Press Esc to cancel
+---
 
 ## ⭐ Starship
 
